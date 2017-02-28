@@ -1,21 +1,24 @@
 #include <stdio.h>
 
 
-
+void swap(int* a,int* b)
+{
+    int temp=*a;
+    
+    *a=*b;
+    *b=temp;
+}
 
 int main(void)
 {
     int x=25;
     int y=52;
-    int temp;
     
     printf("x is %d\n",x);
     printf("y is %d\n",y);
     
     /*swpping*/
-    temp=x;
-    x=y;
-    y=temp;
+    swap(&x,&y); 
     
     printf("x is %d\n",x);
     printf("y is %d\n",y);
